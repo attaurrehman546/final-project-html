@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Quiz</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: linear-gradient(135deg, #b9dfff, #ffffff);
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 8px;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .links a {
+      display: block;
+      margin: 5px 0;
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      form {
+        padding: 15px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Quiz</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <p>1. What does HTML stand for?</p>
+    <input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
+    <input type="radio" name="q1" value="b"> High Text Markdown Language<br>
+    <input type="radio" name="q1" value="c"> Home Tool Markup Language
+  </div>
+
+  <div class="question">
+    <p>2. Which tag is used to make text bold?</p>
+    <input type="radio" name="q2" value="a"> &lt;i&gt;<br>
+    <input type="radio" name="q2" value="b"> &lt;bold&gt;<br>
+    <input type="radio" name="q2" value="c"> &lt;b&gt;
+  </div>
+
+  <div class="question">
+    <p>3. Which tag is used to create a hyperlink?</p>
+    <input type="radio" name="q3" value="a"> &lt;link&gt;<br>
+    <input type="radio" name="q3" value="b"> &lt;a&gt;<br>
+    <input type="radio" name="q3" value="c"> &lt;href&gt;
+  </div>
+
+  <div class="question">
+    <p>4. What is the tag for an unordered list?</p>
+    <input type="radio" name="q4" value="a"> &lt;ul&gt;<br>
+    <input type="radio" name="q4" value="b"> &lt;li&gt;<br>
+    <input type="radio" name="q4" value="c"> &lt;ol&gt;
+  </div>
+
+  <div class="question">
+    <p>5. Which is the correct code for black color?</p>
+    <input type="radio" name="q5" value="a"> #000000<br>
+    <input type="radio" name="q5" value="b"> #f0f8ff<br>
+    <input type="radio" name="q5" value="c"> #006064
+  </div>
+
+  <div class="question">
+    <p>6. What is the code for alignment?</p>
+    <input type="radio" name="q6" value="a"> &lt;allign text&gt;<br>
+    <input type="radio" name="q6" value="b"> &lt;text-align&gt;<br>
+    <input type="radio" name="q6" value="c"> &lt;line-align&gt;
+  </div>
+
+  <div class="question">
+    <p>7. Is it important to add the &lt;!DOCTYPE html&gt; and &lt;html&gt; tags at the start of a program?</p>
+    <input type="radio" name="q7" value="a"> Yes<br>
+    <input type="radio" name="q7" value="b"> No<br>
+  </div>
+
+    <div class="question">
+    <p>8. How do you show that if an Image isn't working, it displays a message?</p>
+    <input type="radio" name="q8" value="a"> &lt;Alt&gt;<br>
+    <input type="radio" name="q8" value="b"> &lt;Ins&gt; (instead)
+  </div>
+  
+  <div class="question">
+  <p>9. Which tag is used to insert a line break in HTML?</p>
+    <input type="radio" name="q9" value="a"> &lt;br &gt;<br>
+    <input type="radio" name="q9" value="b"> &lt;lb &gt;<br>
+    </div>
+  
+  <div class="question">
+  <p>10. What attribute is used to define the source of an image in HTML?</p>
+    <input type="radio" name="q10" value="a"> &lt;http &gt;<br>
+    <input type="radio" name="q10" value="b"> &lt;src &gt;<br>
+    </div>
+
+  <div style="text-align: center;">
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </div>
+
+  <div class="question">
+  <p>11. Write an HTML tag to insert an image with an alt message.</p>
+  <textarea id="q11" rows="4" cols="60" placeholder="Example: &lt;img src='...' alt='...'&gt;"></textarea>
+</div>
+
+</form>
+
+<div id="result"></div>
+
+<div class="links">
+  <a href="index2.html">open "HTML" lesson</a>
+  <a href="index3.html">open "alignment" lesson</a>
+  <a href="index5.html">open "try for yourself" lesson</a>
+  <a href="index6.html">open "background" lesson</a>
+  <a href="index7.html">open "font color" lesson</a>
+  <a href="index8.html">open "images" lesson</a>
+  <a href="index9.html">open "list" lesson</a>
+  <a href="index10.html">open "paragraph" lesson</a>
+  <a href="index11.html">open"review"page</a>
+</div>
+
+<script>
+  function checkAnswers() {
+  const form = document.forms["quizForm"];
+  let score = 0;
+
+  const answers = {
+    q1: "a",
+    q2: "c",
+    q3: "b",
+    q4: "a",
+    q5: "a",
+    q6: "b",
+    q7: "b",
+    q8: "a",
+    q9: "a",
+    q10: "b"
+  };
+
+  // Check MCQs
+  for (let question in answers) {
+    const radios = form[question];
+    let answered = false;
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        if (radios[i].value === answers[question]) {
+          score++;
+        }
+        answered = true;
+        break;
+      }
+    }
+    if (!answered) {
+      alert("Please answer all questions!");
+      return;
+    }
+  }
+
+  // Enhanced Check for Question 11
+  const q11 = document.getElementById("q11").value.trim().toLowerCase();
+  const result = document.getElementById("result");
+  let feedback = "";
+
+  const hasImg = /<img\s/.test(q11);
+  const hasSrc = /src\s*=\s*['"][^'"]+['"]/.test(q11);
+  const hasAlt = /alt\s*=\s*['"][^'"]+['"]/.test(q11);
+  const isSelfClosed = /\/?>\s*$/.test(q11);
+
+  if (hasImg && hasSrc && hasAlt && isSelfClosed) {
+    score++;
+  } else {
+    feedback += "❌ Check your HTML tag:\n";
+    if (!hasImg) feedback += "• Missing `<img>` tag.\n";
+    if (!hasSrc) feedback += "• Missing or incorrect `src` attribute.\n";
+    if (!hasAlt) feedback += "• Missing or incorrect `alt` attribute.\n";
+    if (!isSelfClosed) feedback += "• Make sure the tag ends with `>` or `/>`.\n";
+  }
+
+  // Show final result
+  let message = "";
+
+  switch (score) {
+    case 11: message = "🏆 Perfect! You got all 11 correct!"; break;
+    case 10: message = "🎉 Awesome! You got 10 out of 11 correct!"; break;
+    case 9:  message = "🎉 Great job! You got 9 out of 11 correct!"; break;
+    case 8:  message = "👍 You got 8 out of 11 correct!"; break;
+    case 7:  message = "🙂 You got 7 out of 11. Keep practicing!"; break;
+    case 6:  message = "🙂 You got 6 out of 11. Not bad!"; break;
+    case 5:  message = "😐 You got 5 out of 11. Try again!"; break;
+    case 4:  message = "😕 You got 4 out of 11. Keep working at it!"; break;
+    case 3:  message = "😢 You got 3 out of 11. Don’t give up!"; break;
+    case 2:  message = "😢 You got 2 out of 11. Keep trying!"; break;
+    case 1:  message = "💔 You got 1 out of 11. Review the material!"; break;
+    case 0:  message = "💔 You got 0 out of 11. Don’t give up!"; break;
+  }
+
+  result.innerText = message + (feedback ? "\n\n" + feedback : "");
+}
+
+
+</script>
+
+</body>
+</html>
